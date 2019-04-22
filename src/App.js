@@ -1,4 +1,4 @@
-import React, { Component, useContext } from "react";
+import React, { useContext } from "react";
 import { observer } from "mobx-react-lite";
 import AppStore from "./AppStore";
 
@@ -19,16 +19,10 @@ const Counter = observer(() => {
   );
 });
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <main>
-          <Counter />
-        </main>
-      </div>
-    );
-  }
-}
+const App = () => (
+  <main className="App">
+    <Counter />
+  </main>
+);
 
 export default App;

@@ -2,6 +2,4 @@
 // become more distilled, utils.js becomes a folder, separated
 // out into more fine grained categories
 
-export const incrementCount = count => {
-  return count + 1;
-};
+export const incrementCount = count => count + 1;
