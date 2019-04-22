@@ -1,25 +1,31 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component, useContext } from "react";
+import { observer } from "mobx-react-lite";
+import AppStore from "./AppStore";
+
+const Counter = observer(() => {
+  const store = useContext(AppStore);
+  return (
+    <div className="flex flex-col justify-center items-center h-screen w-screen">
+      <div>
+        <strong>{store.count.value}</strong>
+      </div>
+      <button
+        className="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded"
+        onClick={store.count.increment}
+      >
+        Increment
+      </button>
+    </div>
+  );
+});
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <main>
+          <Counter />
+        </main>
       </div>
     );
   }
