@@ -8,13 +8,21 @@ Current tech:
 - mobx
 - mobx-state-tree
 - mobx-lite
-- prettier
+- prettier + husky
 - typescript
+- jest (unit tests)
 
-Future introductions:
+Future tech introductions:
 
 - axios
 - tailwind (or styled components)
+  Note: this is a type of framework that people either love or hate.
+  I myself love it, for more commonly used atomic CSS bits. Used in
+  combination with styled components or css modules for more specific
+  styles, can be a real game changer.
+- react-testing-libray (integration)
+- cypress (e2e)
+- react-wired
 
 ## Available Scripts
 
