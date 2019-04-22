@@ -6,7 +6,7 @@ const Counter = observer(() => {
   const store = useContext(AppStore);
   return (
     <div className="flex flex-col justify-center items-center h-screen w-screen">
-      <div>
+      <div className="pb-2">
         <strong>{store.count.value}</strong>
       </div>
       <button
